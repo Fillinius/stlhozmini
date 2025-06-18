@@ -1,0 +1,418 @@
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Abhaya Libre SemiBold, serif;
+}
+
+.wrapper {
+  max-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+  border: 1px solid red;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.wrapper::before {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  content: '';
+  display: block;
+  width: 100px;
+  height: 150px;
+  background: url(../image/decor/bir_carrot.svg) 0 0 / contain no-repeat;
+  z-index: -1;
+  transform: translateX(-50%);
+}
+
+.wrapper::after {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  content: '';
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: 150px;
+  background: url(../image/decor/carrot.svg) 0 0 / contain no-repeat;
+  z-index: -1;
+  transform: translateX(-50%);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 81px;
+  background: #012614;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 15px 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.header-text {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0%;
+  padding: 0 15px;
+  margin: 0 0 15px 0;
+}
+
+.header-bg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #04562d;
+  border: 1px solid #04562d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.header-logo {
+  width: 90%;
+}
+
+.header-bg::after {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  content: '';
+  display: block;
+  width: 100px;
+  height: 150px;
+  background: url(../image/decor/for_logo.svg) 0 0 / contain no-repeat;
+  z-index: -1;
+  transform: translateX(-50%);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.section-text {
+  width: 100%;
+  margin-top: 30px;
+  margin-left: 0;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 0%;
+  text-align: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.section-text span {
+  color: #04562d;
+  display: block;
+  margin-top: 10px;
+}
+
+.section-button {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 40px auto 0;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.section-button button {
+  border: none;
+  width: 100%;
+  height: 80px;
+  background: #f7b90f;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.section-button::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: '';
+  display: block;
+  width: 200px;
+  height: 250px;
+  background: url(../image/decor/house.svg) 0 / contain no-repeat;
+  z-index: 1;
+}
+
+.section-button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: url(../image/decor/big_tomate.svg) 0 / contain no-repeat;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.ellipse {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  background: #04562d;
+  opacity: 0.9;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.ellipse_yellow {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 100px;
+  left: 20px;
+  background: #fec207;
+  filter: blur(100px);
+  border-radius: 50%;
+}
+
+.section-link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0%;
+  color: #012614;
+  text-decoration: none;
+  display: block;
+  padding: 0 10px;
+}
+
+footer {
+  background-color: #333;
+  color: #ccc;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 40px;
+}
+
+/* Медиазапросы для планшетов */
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 40px;
+  }
+
+  .header {
+    flex-direction: row;
+    padding: 0 20px;
+    margin-top: 50px;
+  }
+
+  .header-text {
+    font-size: 32px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .header-bg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .section-text {
+    font-size: 40px;
+    text-align: left;
+    padding: 0;
+  }
+
+  .section-button {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .section-link {
+    font-size: 24px;
+  }
+
+  .ellipse {
+    width: 881px;
+    height: 1002px;
+    top: 540px;
+    left: 661px;
+    transform: none;
+  }
+}
+
+.ellipse {
+  width: 881px;
+  height: 1002px;
+  top: 540px;
+  left: 661px;
+  transform: none;
+}
+
+/* Медиазапросы для десктопов */
+@media (min-width: 1024px) {
+  .wrapper {
+    max-width: 1083px;
+    height: auto;
+    min-height: 1083px;
+  }
+
+  .wrapper::before {
+    left: 400px;
+    width: 200px;
+    height: 300px;
+    transform: none;
+  }
+
+  .wrapper::after {
+    left: 600px;
+    width: 2000px;
+    height: 300px;
+    transform: none;
+  }
+
+  .header {
+    width: 966px;
+    height: 81px;
+    margin-top: 96px;
+    padding-left: 29px;
+  }
+
+  .header-text {
+    font-size: 40px;
+    padding-left: 0;
+  }
+
+  .header-bg {
+    width: 160px;
+    height: 160px;
+  }
+
+  .header-bg::after {
+    left: 770px;
+    width: 200px;
+    height: 300px;
+    transform: none;
+  }
+
+  .main {
+    align-items: flex-start;
+  }
+
+  .section-text {
+    width: 834px;
+    height: auto;
+    margin-top: 87px;
+    margin-left: 40px;
+    font-size: 70px;
+  }
+
+  .section-button {
+    width: 498px;
+    height: 163px;
+    margin-left: 82px;
+    margin-top: 120px;
+  }
+
+  .section-button button {
+    height: 100%;
+  }
+
+  .section-button::after {
+    width: 400px;
+    height: 500px;
+  }
+
+  .section-button::before {
+    top: 350px;
+    left: 700px;
+    width: 400px;
+    height: 400px;
+    transform: none;
+  }
+
+  .ellipse {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    bottom: -300px;
+    right: -300px;
+    background: #04562d;
+    opacity: 0.9;
+    border-radius: 50%;
+    z-index: 0;
+    transform: none;
+  }
+
+  .ellipse_yellow {
+    width: 319px;
+    height: 319px;
+    top: 177px;
+    left: 40px;
+    filter: blur(590px);
+  }
+
+  .section-link {
+    font-size: 36px;
+  }
+}
+
+/* Медиазапросы для планшетов */
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 40px;
+  }
+
+  .header {
+    flex-direction: row;
+    padding: 0 20px;
+    margin-top: 50px;
+  }
+
+  .header-text {
+    font-size: 32px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .header-bg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .section-text {
+    font-size: 40px;
+    text-align: left;
+    padding: 0;
+  }
+
+  .section-button {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .section-link {
+    font-size: 24px;
+  }
+}
